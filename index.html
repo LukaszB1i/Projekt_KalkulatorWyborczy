@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Wyborczy</title>   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Kalkulator Wyników Wyborczych</h1>
+
+    <section>
+        <h2>Dodaj Komitet Wyborczy</h2>
+        <form id="committee-form">
+            <label for="committee-name">Nazwa:</label>
+            <input type="text" id="committee-name" required>
+
+            <input type="checkbox" id="is-coalition">
+            <label for="is-coalition">Czy koalicja?</label>
+
+            <label for="committee-votes">Liczba głosów:</label>
+            <input type="number" id="committee-votes" min="0" required>
+
+            <button type="submit">Dodaj Komitet</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Zarejestrowane Komitety</h2>
+        <div id="registered-committees-list">
+            <p>Brak zarejestrowanych komitetów.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Wyniki Wyborów</h2>
+        <button id="calculate-results-btn">Oblicz Wyniki</button>
+        <div id="election-results">
+        </div>
+    </section>
+
+    <section>
+        <h2>Wykres</h2>
+        <canvas id="Chart"></canvas>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
